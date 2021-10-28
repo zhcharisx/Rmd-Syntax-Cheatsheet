@@ -1,0 +1,12 @@
+---
+title: "Math expression"
+author: "Yufan Cao / Yingfei Zhu"
+date: "10/27/2021"
+output: html_document
+---
+
+In side a text chunk of rmd file, you can use mathematical notation with dollar sign in two different styles.
+
+Inline LaTeX equations can be written if you surround it by a pair of dollar signs using the LaTeX syntax, for example  `$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$ ` will produce $f(k) = {n \choose k} p^{k} (1-p)^{n-k}$
+
+Display style math expressions can be written in a pair of double dollar signs, for example  `$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$ ` will produce $$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$
