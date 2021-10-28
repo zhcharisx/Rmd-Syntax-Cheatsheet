@@ -1,0 +1,245 @@
+---
+title: "Math Expression"
+author: "Yufan Cao / Yingfei Zhu"
+output:
+  html_document:
+    df_print: paged
+---
+
+# 1. Mathematical notation
+In side a text chunk of rmd file, you can use mathematical notation with dollar sign in two different styles.
+
+Inline LaTeX equations can be written if you surround it by a pair of dollar signs using the LaTeX syntax. Example:  `$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$ ` will produce $f(k) = {n \choose k} p^{k} (1-p)^{n-k}$  
+
+Display style math expressions can be written in a pair of double dollar signs. Example  `$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$ ` will produce $$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$  
+
+Notice: there is no space between the $ and your mathematical notation.
+You can also use math environments inside `$ $` or `$$ $$`
+
+# 2. Common Mathematical Symbol
+
+**Math Mode Accents**
+
+|Output|Syntax|
+|------|------|
+|$x^{n}$|```$x^{n}$```|
+|$x_{n}$|```$x_{n}$```|
+|$\overline{x}$|```$\overline{x}$```|
+|$\hat{x}$|```$\hat{x}$```|
+|$\tilde{x}$|```$\tilde{x}$```|
+|$\acute{x}$|```$\acute{x}$```|
+|$\tilde{x}$|```$\vec{x}$```|
+|$\dot{x}$|```$\dot{x}$```|
+
+**Binary Relation**
+
+|Output|Syntax|
+|------|------|
+|$x = y$|```$x = y$```|
+|$x < y$|```$x < y$```|
+|$x > y$|```$x > y$```|
+|$x \approx y$|```$x \approx y$```|
+|$x \ne y$|```$x \ne y$```or```$x \neq y$```|
+|$x \le y$|```$x \le y$```|
+|$x \ge y$|```$x \ge y$```|
+|$x \equiv y$|```$x \equiv y$```|
+|$x \ll y$|```$x \ll y$```|
+|$x \gg y$|```$x \gg y$```|
+|$x \doteq y$|```$x \doteq y$```|
+|$x \prec y$|```$x \prec y$```|
+|$x \succ y$|```$x \succ y$```|
+|$x \sim y$|```$x \sim y$```|
+|$x \preceq y$|```$x \preceq y$```|
+|$x \succeq y$|```$x \succeq y$```|
+|$x \simeq y$|```$x \simeq y$```|
+|$x \subset y$|```$x \subset y$```|
+|$x \in A$|```$x \in A$```|
+|$x \notin A$|```$x \notin A$```|
+|$A \ni x$|```$x \ni A$```or```$A \owns x$```|
+|$x \subset B$|```$x \subset B$```|
+|$x \subseteq B$|```$x \subseteq B$```|
+|$A \cup B$|```$A \cup B$```|
+|$A \cap B$|```$A \cap B$```|
+|$A \perp B$|```$A \perp B$```|
+|$A \bowtie B$|```$A \bowtie B$```|
+|$A \propto B$|```$A \propto B$```|
+|$A \mid B$|```$A \mid B$```|
+|$A \parallel B$|```$A \parallel B$```|
+
+**Operators / Statistical Expression**
+
+|Output|Syntax|
+|------|------|
+|$\frac{a}{b}$|```$\frac{a}{b}$```|
+|$\frac{\partial f}{\partial x}$|```$\frac{\partial f}{\partial x}$```|
+|$\binom{n}{k}$|```$\binom{n}{k}$```|
+|$x_{1} + x_{2} + \cdots + x_{n}$|```$x_{1} + x_{2} + \cdots + x_{n}$```|
+|$x_{1}, x_{2}, \dots, x_{n}$|```$x_{1}, x_{2}, \dots, x_{n}$```|
+|$\mathbf{x} = \langle x_{1}, x_{2}, \dots, x_{n}\rangle$|```$\mathbf{x} = \langle x_{1}, x_{2}, \dots, x_{n}\rangle$```|
+|$|A|$|```$|A|$```|
+|$X \sim {\sf Binom}(n, \pi)$|```$X \sim {\sf Binom}(n, \pi)$``` (```sf``` for “slide font”)|
+|$\mathrm{P}(X \le x) = {\tt pbinom}(x, n, \pi)$|```$\mathrm{P}(X \le x) = {\tt pbinom}(x, n, \pi)$``` (```tt``` for “typewriter type”)|
+|$P(A \mid B)$|```$P(A \mid B)$```|
+|$\mathrm{P}(A \mid B)$|```$\mathrm{P}(A \mid B)$``` (```mathrm``` for “math roman font”|
+|$\{1, 2, 3\}$|```$\{1, 2, 3\}$```|
+|$\sin(x)$|```$\sin(x)$```|
+|$\log(x)$|```$\log(x)$```|
+|$\int_{a}^{b}$|```$\int_{a}^{b}$```|
+|$\left(\int_{a}^{b} f(x) \; dx\right)$|```$\left(\int_{a}^{b} f(x) \; dx\right)$```|
+|$\left[\int_{-\infty}^{\infty} f(x) \; dx\right]$|```$\left[\int_{-\infty}^{\infty} f(x) \; dx\right]$```|
+|$\left. F(x) \right|_{a}^{b}$|```$\left. F(x) \right|_{a}^{b}$```|
+|$\sum_{x = a}^{b} f(x)$|```$\sum_{x = a}^{b} f(x)$```|
+|$\prod_{x = a}^{b} f(x)$|```$\prod_{x = a}^{b} f(x)$```|
+|$\lim_{x \to \infty} f(x)$|```$\lim_{x \to \infty} f(x)$```|
+|$\displaystyle \lim_{x \to \infty} f(x)$|```$\displaystyle \lim_{x \to \infty} f(x)$```|
+
+**Other symbols**
+
+|Output|Syntax|
+|------|------|
+|$\because$|```$\because$```|
+|$\therefore$|```$\therefore$```|
+|$\forall$|```$\forall$```|
+|$\exists$|```$\exists$```|
+|$\partial$|```$\partial$```|
+|$\emptyset$|```$\emptyset$```|
+|$\nabla$|```$\nabla$```|
+|$\triangle$|```$\triangle$```|
+|$\angle$|```$\angle$```|
+|$\surd$|```$\surd$```|
+|$\S$|```$\S$```|
+|$\varpropto$|```$\varpropto$```|
+|$\diamondsuit$|```$\diamondsuit$```|
+|$\heartsuit$|```$\heartsuit$```|
+|$\clubsuit$|```$\clubsuit$```|
+|$\spadesuit$|```$\spadesuit$```|
+
+# 3. Matrix
+
+- **Matrix with no bracket**
+
+```\
+$$X = \begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{array}$$  
+```
+
+$$X = \begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{array}$$
+
+- **With square bracket**
+```\
+$$X = \begin{bmatrix}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{bmatrix}$$
+```
+$$X = \begin{bmatrix}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{bmatrix}$$
+
+- **With parentheses**
+```\
+$$X = \begin{pmatrix}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{pmatrix}$$
+```
+$$X = \begin{pmatrix}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{pmatrix}$$
+
+- **With determinant / vertical bar bracket**
+```\
+$$\begin{vmatrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   \end{vmatrix} $$
+```
+$$\begin{vmatrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   \end{vmatrix}$$
+   
+- **With curly brackets**
+```\
+$$\begin{Bmatrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   \end{Bmatrix} $$
+```
+$$\begin{Bmatrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   \end{Bmatrix} $$
+
+- **With double vertical bar brackets**
+```\
+$$\begin{Vmatrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   \end{Vmatrix} $$
+```
+$$\begin{Vmatrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   \end{Vmatrix} $$
+
+- **Small inline matrix**
+
+Small inline matrix```$\big(\begin{smallmatrix} a & b\\ c & d \end{smallmatrix}\big)$```  will produce  
+Small inline matrix$\big(\begin{smallmatrix} a & b\\ c & d \end{smallmatrix}\big)$
+
+# 4. Greek letters
+
+|Output|Syntax|
+|------|------|
+|$\alpha A$|```$\alpha A$```|
+|$\beta B$|```$\beta B$```|
+|$\gamma \Gamma$|```$\gamma \Gamma$```|
+|$\delta \Delta$|```$\delta \Delta$```|
+|$\epsilon \varepsilon E$|```$\epsilon \varepsilon E$```|
+|$\zeta Z \sigma \,\!$|```$\zeta Z \sigma \,\!$```|
+|$\eta H$|```$\eta H$```|
+|$\theta \vartheta \Theta$|```$\theta \vartheta \Theta$```|
+|$\iota I$|```$\iota I$```|
+|$\kappa K$|```$\kappa K$```|
+|$\lambda \Lambda$|```$\lambda \Lambda$```|
+|$\mu M$|```$\mu M$```|
+|$\nu N$|```$\nu N$```|
+|$\xi\Xi$|```$\xi\Xi$```|
+|$o O$|```$o O$```|
+|$\pi \Pi$|```$\pi \Pi$```|
+|$\rho\varrho P$|```$\rho\varrho P$```|
+|$\sigma \Sigma$|```$\sigma \Sigma$```|
+|$\tau T$|```$\tau T$```|
+|$\upsilon \Upsilon$|```$\upsilon \Upsilon$```|
+|$\phi \varphi \Phi$|```$\phi \varphi \Phi$```|
+|$\chi X$|```$\chi X$```|
+|$\psi \Psi$|```$\psi \Psi$```|
+|$\omega \Omega$|```$\omega \Omega$```|
+
+# 5. Aligning Equations
+
+If you want a sequence of aligned equations (often very useful for demonstrating algebraic manipulation or for plugging values into equations), use ```\begin{align*} ... \end{align*}```. Separate lines with ```\\``` and use ```&``` to mark where things should line up. Note: No dollar signs are needed for mathematical expression in this method.
+
+Example:
+```\
+$\begin{aligned}
+AR(p): Y_i &= c + \epsilon_i + \phi_i Y_{i-1} \dots \\
+Y_{i} &= c + \phi_i Y_{i-1} \dots
+\end{aligned}$
+```
+
+$\begin{aligned}
+AR(p): Y_i &= c + \epsilon_i + \phi_i Y_{i-1} \dots \\
+Y_{i} &= c + \phi_i Y_{i-1} \dots
+\end{aligned}$
+
+
+
